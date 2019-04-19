@@ -1,0 +1,399 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+#logo {
+    height: 40px;
+    width: 40;
+    padding-top: 5px;
+    float:left;
+    border-radius: 8px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to bottom right, #4776e6, #8e54e9);
+    
+}
+
+nav:nth-child(1) {
+    padding-left: 25px;
+}
+
+.navlink {
+    padding: 5px;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: white;
+    font-size: 1.3em;
+    float: right;
+    align-content: center;
+}
+
+.navlink a, .navlink a:link, .navlink a:visited, .navlink a:hover, .navlink a:active {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.4s ease;
+    
+}
+
+.navlink a:hover {
+    transition: background-color 0.8s ease;
+    background-color: #666d6f;
+}
+
+#makeWorkout{
+    
+}
+
+.workout{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex;  
+  flex-direction: row;
+  margin-left: 600px;
+  margin-bottom: 25px;
+  width: 800px;
+  justify-content: space-around;
+}
+
+#img
+{
+/*border-radius: 50%;*/
+width: 100px;
+height: auto;
+padding-top: 100px;
+background: #f1f1f1;
+border-radius: 50%;
+}
+
+#domoMessage {
+    display:none;
+    top: 250px;
+    width: 250px;
+    height: 650px;
+    position: absolute;
+    z-index: 200;
+    right: 0px;
+    overflow: hidden;
+}
+
+#domoMessage h3 {
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+#signPage {    
+    display: flex;  
+    flex-direction: row;  /* make main axis vertical */
+}
+
+#container {    
+    display: flex;  
+    flex-direction: row;  /* make main axis vertical */
+}
+
+#link {
+    background-image: linear-gradient(to bottom right, #4776e6, #8e54e9);
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center;
+    width: 30vw;
+    height: 100vh;
+    float: left;
+}
+
+#side {
+    background-image: linear-gradient(to bottom right, #4776e6, #8e54e9);
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center;
+    width: 30vw;
+    height: 100vh;
+    float: left;
+}
+
+.stats {
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 100vh;
+    width: 70vw;
+/*   float: right;*/
+}
+
+#bmicard {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  padding: 15px 50px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 30px;
+  border-radius: 40px;
+}
+
+#sig {
+    background-image: linear-gradient(to bottom right, #4776e6, #8e54e9);
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 100vh;
+    width: 30vw;
+    background-color: blue;
+}
+
+
+
+#signup {
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 100vh;
+    width: 70vw;
+    float: right;
+}
+
+#loginPage {    
+    display: flex;  
+    flex-direction: row;  /* make main axis vertical */
+}
+
+
+#log {
+    background-image: linear-gradient(to bottom right, #4776e6, #8e54e9);
+   display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 100vh;
+    width: 30vw;
+}
+
+#login {
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 100vh;
+    width: 70vw;
+    float: right;
+}
+
+#loginForm {
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    padding: 10px;
+    
+}
+
+#signupForm {
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    padding: 10px;
+    
+}
+
+#user{
+     width: 300px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+
+#pass{
+    width: 300px;
+    padding: 15px;
+    border: none;
+    margin-bottom: 15px;
+    background-color: #f3f3f3;
+    font-size: 16px;
+
+}
+
+#pass2{
+    width: 300px;
+    padding: 15px;
+    border: none;
+    background-color: #f3f3f3;
+    font-size: 16px;
+
+}
+
+.formSubmit{
+  background-image: linear-gradient(to bottom right, #4776e6, #8e54e9);
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+
+a { 
+    text-decoration: none;
+}
+
+#sign {
+  border: 2px;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+
+#stats{
+    display: flex;  
+    flex-direction: column;
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    margin-top: 20px;
+}
+
+#statsForm{
+    display: flex;  
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    padding: 10px;
+}
+
+#fill{
+    display: flex;  
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+#workoutAge{
+     width: 300px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+
+#workoutName{
+     width: 275px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+
+.workoutName{
+   float: left;
+}
+
+.workoutSets{
+    float: right;
+}
+
+.workoutReps{
+    float: right;
+}
+
+#workoutReps{
+     width: 275px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+
+#workoutSets{
+     width: 275px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+#statsAge{
+     width: 300px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+
+#statsName{
+     width: 300px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+#statsHeight{
+     width: 300px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+
+#statsWeight{
+     width: 300px;
+     padding: 15px;
+     margin-bottom: 15px;
+     border: none;
+     background-color: #f3f3f3;
+     font-size: 16px;
+}
+
+label{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.makeStatsSubmit{
+  background-image: linear-gradient(to bottom right, #4776e6, #8e54e9);
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50px;
+}
+
+.stats{
+    float: right;
+}
+
+#logoutbutton{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}

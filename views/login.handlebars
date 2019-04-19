@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Project2</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body> 
+   <section id="loginPage">
+  <section id="log">
+    <h1>Create an account</h1>
+    <p>Start tracking your workouts</p>
+    <a href="/signup">
+        <div id="sign">SIGN UP</div>
+      </a>
+ </section>
+    
+  <section id="login">
+    <h1>Sign in to app</h1>
+    <p>Enter username and passowrd</p>
+    <form id="loginForm" name="loginForm" action="/login" method="POST" class="mainForm">
+      
+      <input id="user" type="text" name="username" placeholder="Username"/>
+     
+      <input id="pass" type="password" name="pass" placeholder="Password"/>
+      <input type="hidden" name="_csrf" value={{csrfToken}} />
+      <input class="formSubmit" type="submit" value="SIGN IN" />
+    </form>
+  </section>
+  <div id="domoMessage"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
+    <h3><span id="errorMessage">Wrong username or password</span></h3><img id="domo" src="assets/img/domo.png" alt="domo"/>
+  </div>
+  </section>
+  <script src="/assets/bundle.js"></script>
+</body>
+</html>

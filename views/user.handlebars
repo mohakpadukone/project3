@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Project2</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+    
+<body>
+
+  <section id="containter">
+  <section id="side">
+    <a href="/maker"><div id="logoutbutton">Dashboard</div></a>
+    <a href="/logout"><div id="logoutbutton">Log out</div></a>
+  </section>
+<!-- <section id="stats">-->
+    <div class="stats">
+        {{#if stats}}
+          {{#each stats}}
+            <div class="stats">
+                <div id="img"></div>
+                <h3 class="statsName">Name: {{this.name}}</h3>
+                <h3 class="statsAge">Age: {{this.age}}</h3>
+                <h3 class="statsHeight">Height: {{this.height}}</h3>
+                <h3 class="statsWeight">Weight: {{this.weight}}</h3>
+                <div id="bmicard">
+                    <h3 class="height">{{this.height}}</h3>
+                    <h3 class="weight">{{this.weight}}</h3>
+                    <h3 id="bmi"></h3>
+                </div>
+            </div>
+           {{/each}}
+          {{else}}
+            <h3 class="emptyDomo">No Stats yet</h3>
+        {{/if}}             
+    </div>
+<!--  </section>-->
+ 
+    
+  <div id="domoMessage"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
+    <h3><span id="errorMessage"></span></h3><img id="domo" src="assets/img/domo.png" alt="domo"/>
+  </div>
+  
+  
+ </section>
+    <script src="/assets/bundle.js"></script>
+<script>
+var element = document.getElementById("bmi");
+
+let height = document.querySelector(".height").textContent;
+let weight = document.querySelector(".weight").textContent;
+  
+document.querySelector(".height").innerHTML = "BMI";
+document.querySelector(".weight").innerHTML = Math.round((weight * 0.453) / Math.pow((height * 2.54),2) * 10000 * 10) /10;
+
+</script>
+    
+    
+</body>
+    
+</html>

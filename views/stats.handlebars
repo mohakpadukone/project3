@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Project2</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body> 
+   <nav>
+    <div class="navlink"><a href="/logout">Log out</a></div>
+    
+  </nav>
+  <section id="stats">
+    <h3>Enter your information to know your health status</h3>
+    <form id="statsForm" name="statsForm" action="/stats" method="POST" class="statsForm">
+      <div id="fill">
+      <label for="name">Name </label>
+      <input id="statsName" type="text" name="name" placeholder="Name"/>
+      </div>
+        <div id="fill">
+      <label for="age">Age </label>
+      <input id="statsAge" type="text" name="age" placeholder="age"/>
+        </div><div id="fill">
+      <label for="height">Height </label>
+      <input id="statsHeight" type="text" name="height" placeholder="Inches"/>
+      </div><div id="fill">
+      <label for="weight">Weight </label>
+      <input id="statsWeight" type="text" name="weight" placeholder="lbs"/>
+    </div>
+      
+      <input type="hidden" name="_csrf" value={{csrfToken}} />
+      <input class="makeStatsSubmit" type="submit" value="Save" />
+    </form>
+  </section>
+  <div id="domoMessage"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
+    <h3><span id="errorMessage">Wrong username or password</span></h3><img id="domo" src="assets/img/domo.png" alt="domo"/>
+  </div>
+  <script src="/assets/bundle.js"></script>
+</body>
+</html>
