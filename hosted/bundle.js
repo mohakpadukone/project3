@@ -107,21 +107,12 @@ var loadWorkoutsFromServer = function loadWorkoutsFromServer(csrf) {
     ReactDOM.render(React.createElement(WorkoutList, { csrf: csrf, workouts: data.workouts }), document.querySelector("#workouts"));
   });
 };
-    
-//var loadStatsFromServer = function loadStatsFromServer(csrf) {
-//  sendAjax('GET', '/getStats', null, function (data) {
-//    ReactDOM.render(React.createElement(StatsList, { csrf: csrf, stats: data.stats }), document.querySelector("#stats"));
-//  });
-//};
 
 var setup = function setup(csrf) {
   ReactDOM.render(React.createElement(WorkoutForm, { csrf: csrf }), document.querySelector("#makeWorkout"));
 
   ReactDOM.render(React.createElement(WorkoutList, { csrf: csrf, workouts: [] }), document.querySelector("#workouts"));
   loadWorkoutsFromServer(csrf);
-    
-//  ReactDOM.render(React.createElement(StatsList, { csrf: csrf, stats: [] }), document.querySelector("#stats"));
-//  loadStatsFromServer(csrf);
 };
     
 
