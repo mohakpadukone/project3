@@ -14,7 +14,6 @@ var handleStats = function handleStats(e) {
 
     var csrf = document.querySelector('#statsForm').querySelector('#csrfToken').value;
 
-//    loadStatsFromServer(csrf);
   });
 
   return false;
@@ -67,56 +66,6 @@ var createStatsForm = function createStatsForm(csrf) {
   ReactDOM.render(React.createElement(StatsForm, { csrf: csrf }), document.querySelector("#stats"));
 };
 
-//var WorkoutList = function WorkoutList(props) {
-//  if (props.workouts.length === 0) {
-//    return React.createElement(
-//      "div",
-//      { className: "WorkoutList" },
-//      React.createElement(
-//        "h3",
-//        { className: "empty" },
-//        "No Workouts Yet"
-//      )
-//    );
-//  }
-
-//  var workoutNodes = props.workouts.map(function (workout) {
-//    return React.createElement(
-//      "div",
-//      { key: workout._id, className: "workout" },
-//      React.createElement(
-//        "h3",
-//        { className: "workoutName" },
-//        "Name: ",
-//        workout.name
-//      ),
-//      React.createElement(
-//        "h3",
-//        { className: "workoutSets" },
-//        "Sets: ",
-//        workout.sets
-//      ),
-//       React.createElement(
-//        "h3",
-//        { className: "workoutReps" },
-//        "Reps: ",
-//        workout.reps
-//      )
-//    );
-//  });
-
-//  return React.createElement(
-//    "div",
-//    { className: "workoutList" },
-//    workoutNodes
-//  );
-//};
-
-//var loadWorkoutsFromServer = function loadWorkoutsFromServer(csrf) {
-//  sendAjax('GET', '/getWorkouts', null, function (data) {
-//    ReactDOM.render(React.createElement(WorkoutList, { csrf: csrf, workouts: data.workouts }), document.querySelector("#workouts"));
-//  });
-//};
 
 var setup = function setup(csrf) {
   //ReactDOM.render(React.createElement(StatsForm, { csrf: csrf }), document.querySelector("#statsWorkout"));
