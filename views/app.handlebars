@@ -1,50 +1,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Project2</title>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <title>Project3</title>
+  <script crossorigin src="https://unpkg.com/react@15/dist/react.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script crossorigin src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
   <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-  <section id="containter">
-  <section id="link">
-    <div class="navlink"><a href="/user">Your stats</a></div>
+  <nav><a href="/login"></a>
     <div class="navlink"><a href="/logout">Log out</a></div>
-</section>
+     
+      <div class="navlink"><a href="/user">User</a></div>
+       <div class="navlink"><a href="/maker">Track</a></div>
+  </nav>
   <section id="makeWorkout">
-      <h1> Track your workouts!</h1>
-    <form id="workoutForm" name="WorkoutForm" action="/maker" method="POST" class="workoutForm">
-      <label for="name">Exercise: </label>
-      <input id="workoutName" type="text" name="name" placeholder="Name"/>
-      <label for="sets">Sets: </label>
-      <input id="workoutSets" type="text" name="sets" placeholder="Sets"/>
-      <label for="reps">Reps: </label>
-      <input id="workoutReps" type="text" name="reps" placeholder="Reps"/>
-      <input type="hidden" name="_csrf" value={{csrfToken}} />
-      <input class="makeWorkoutSubmit" type="submit" value="Add" />
-    </form>
   </section>
   <section id="workouts">
-<!--    <div class="workout">-->
-        {{#if workouts}}
-          {{#each workouts}}
-            <div class="workout">
-                <h3 class="workoutName">{{this.name}}</h3>
-                <h3 class="workoutSets">{{this.sets}}</h3>
-                <h3 class="workoutReps">{{this.reps}}</h3>
-            </div>
-           {{/each}}
-          {{else}}
-            <h3 class="empty">No Workouts yet</h3>
-        {{/if}}             
-<!--    </div>-->
+      
   </section>
-  <div id="domoMessage"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
-    <h3><span id="errorMessage"></span></h3><img id="domo" src="assets/img/domo.png" alt="domo"/>
-  </div>
-</section>
+    
+
+  <div id="domoMessage">
+    <h3><span id="errorMessage"></span></h3>
+    </div>
   <script src="/assets/bundle.js"></script>
 </body>
 </html>

@@ -2,16 +2,16 @@ const models = require('../models');
 
 const Stats = models.Stats;
 
-const userPage = (req, res) => {
-  Stats.StatsModel.findByOwner(req.session.account._id, (err, docs) => {
-    if (err) {
-      console.log(err);
-      return res.status(400).json({ error: 'An error occured' });
-    }
-
-    return res.render('user', { csrfToken: req.csrfToken(), stats: docs }); // domos
-  });
-};
+// const userPage = (req, res) => {
+//  Stats.StatsModel.findByOwner(req.session.account._id, (err, docs) => {
+//    if (err) {
+//      console.log(err);
+//      return res.status(400).json({ error: 'An error occured' });
+//    }
+//
+//    return res.render('user', { csrfToken: req.csrfToken(), stats: docs }); // domos
+//  });
+// };
 
 const statsPage = (req, res) => {
   Stats.StatsModel.findByOwner(req.session.account._id, (err, docs) => {
@@ -55,7 +55,22 @@ const storeStats = (req, res) => {
   return statsPromise;
 };
 
+const getStats = (request, response) => {
+  const req = request;
+  const res = response;
+
+  return Stats.StatsModel.findByOwner(req.session.account._id, (err, docs) => {
+    if (err) {
+      console.log(err);
+      return res.status(400).json({ error: 'An error occurred' });
+    }
+
+    return res.json({ stats: docs });
+  });
+};
+
 
 module.exports.store = storeStats;
 module.exports.statsPage = statsPage;
-module.exports.userPage = userPage;
+// module.exports.userPage = userPage;
+module.exports.getStats = getStats;

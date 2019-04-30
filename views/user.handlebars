@@ -1,20 +1,29 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Project2</title>
+  <title>Project3</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="shortcut icon" href="/assets/img/favicon.png"/>
   <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
 </head>
     
 <body>
 
-  <section id="containter">
+<!--  <section id="containter">-->
+      <nav><a href="/login"></a>
+    <div class="navlink"><a href="/logout">Log out</a></div>
+     
+      <div class="navlink"><a href="/user">User</a></div>
+       <div class="navlink"><a href="/maker">Track</a></div>
+  </nav>
+<!--
   <section id="side">
     <a href="/maker"><div id="logoutbutton">Dashboard</div></a>
     <a href="/logout"><div id="logoutbutton">Log out</div></a>
   </section>
+-->
 <!-- <section id="stats">-->
     <div class="stats">
         {{#if stats}}
@@ -30,6 +39,7 @@
                     <h3 class="weight">{{this.weight}}</h3>
                     <h3 id="bmi"></h3>
                 </div>
+                <a href="/stats"><p>Edit Stats</p></a>
             </div>
            {{/each}}
           {{else}}
@@ -44,7 +54,7 @@
   </div>
   
   
- </section>
+<!-- </section>-->
     <script src="/assets/bundle.js"></script>
 <script>
 var element = document.getElementById("bmi");
