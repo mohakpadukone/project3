@@ -65,41 +65,6 @@ const WorkoutList = function(props){
   );
 };
 
-//const StatsList = function(props){
-//  if(props.stats.length === 0){
-//    return(
-//      <div className="statsList">
-//        <h3 className="empty">No Workouts Yet</h3>
-//      </div>
-//    );
-//  }
-//  
-//  const statsNodes = props.stats.map(function(stats){
-//    return(
-//      <div key={stats._id} className="stats">
-//        <h3 className="statsName">Name: {stats.name}</h3>
-////        <h3 className="workoutSets">Sets: {workout.sets}</h3>
-////        <h3 className="workoutReps">Reps: {workout.reps}</h3>
-//      </div>
-//    );
-//  });
-//  
-//  return(
-//    <div className="statsList">
-//      {statsNodes}
-//    </div>
-//  );
-//};
-
-//const loadStatsFromServer = (csrf) =>{
-//  sendAjax('GET', '/getStats', null, (data) =>{
-//    ReactDOM.render(
-//      <StatsList csrf={csrf} stats={data.stats} />,
-//      document.querySelector("#stats")
-//    );
-//  });
-//};
-
 const loadWorkoutsFromServer = (csrf) =>{
   sendAjax('GET', '/getWorkouts', null, (data) =>{
     ReactDOM.render(
@@ -120,12 +85,6 @@ const setup = function(csrf){
     document.querySelector("#workouts")
   ); 
   loadWorkoutsFromServer(csrf);
-    
-//  ReactDOM.render(
-//    <StatsList csrf={csrf} stats={[]} />,
-//    document.querySelector("#stats")
-//  ); 
-//  loadStatsFromServer(csrf);
 };
 
 
