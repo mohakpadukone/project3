@@ -37,29 +37,19 @@ const handleSignup = (e) =>{
 
 const LoginWindow = (props) =>{
   return(
-   <form id="loginForm" name="loginForm"
+  <form id="loginForm" name="loginForm"
         onSubmit={handleLogin}
         action="/login"
         method='POST'
         className="mainForm"
     >
-//    <label htmlFor="username">Username: </label>
-//    <input id="user" type="text" name="username" placeholder="username" />
-//    <label htmlFor="pass">Password: </label>
-//    <input id="pass" type="password" name="pass" placeholder="password" />
-//    <input type="hidden" name="_csrf" value={props.csrf} />
-//    <input className="formSubmit" type="submit" value="Sign in" />
-//      <section id="login">
-//    
-//    <p>Enter username and passowrd</p>
-//    <form id="loginForm" name="loginForm" action="/login" method="POST" class="mainForm">
-      //<h1>Sign in to app</h1>
-      <input id="user" type="text" name="username" placeholder="Username"/>
-     
-      <input id="pass" type="password" name="pass" placeholder="Password"/>
-      <input type="hidden" name="_csrf" value={{csrfToken}} />
-      <input class="formSubmit" type="submit" value="SIGN IN" />
-    </form>
+    <label htmlFor="username">Username: </label>
+    <input id="user" type="text" name="username" placeholder="username" />
+    <label htmlFor="pass">Password: </label>
+    <input id="pass" type="password" name="pass" placeholder="password" />
+    <input type="hidden" name="_csrf" value={props.csrf} />
+    <input className="formSubmit" type="submit" value="Sign in" />
+  </form>
   );
 };
 
@@ -72,7 +62,7 @@ const SignupWindow = (props) =>{
         className="mainForm"
     >
     <label htmlFor="username">Username: </label>
-    <input id="user" type="text" name="username" placeholder="useme" />
+    <input id="user" type="text" name="username" placeholder="username" />
     <label htmlFor="pass">Password: </label>
     <input id="pass" type="password" name="pass" placeholder="password" />
     <label htmlFor="pass2">Password: </label>
